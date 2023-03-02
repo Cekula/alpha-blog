@@ -56,7 +56,9 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-
+  
+  #Call 'byebug' anywhere in the code to stop execution and get a dubugge console
+  gem 'byebug', '~> 9.0', '>= 9.0.6'
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
