@@ -2,4 +2,9 @@
 
 <%= render 'form' %>
 
+<%= link_to 'Delete', article_path(@article), data: {
+          turbo_method: :delete,
+          turbo_confirm: "Are you sure",
+
+        } %> |
 <%= link_to 'Return to article listing', articles_path %> 
