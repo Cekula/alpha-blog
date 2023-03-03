@@ -30,11 +30,16 @@ class ArticlesController < ApplicationController
   def update
     @article = Article.find(params[:id])
     if @article.update(params.require(:article).permit(:title, :description))
-      flash[:notice] = "Artile was updated successefully"
+      flash[:notice] = "Article was updated successefully"
       redirect_to @article
     else
       render "edit", status: :unprocessable_entity
     end
   end
 
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+    redirect_to article_path, status: :see_other
+  end
 end
