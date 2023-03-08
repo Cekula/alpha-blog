@@ -3,3 +3,7 @@
 .navbar {
   background-color: #da9218 !important;
 }
+
+#home-container {
+	margin-top: 25px;
+}
