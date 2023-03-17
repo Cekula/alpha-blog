@@ -30,6 +30,10 @@
                 <ul class="dropdown-menu row justify-content md-1">
                   <li> <a class="dropdown-item"<%= link_to 'View your profile', user_path(current_user) %></a></li>
                   <li> <a class="dropdown-item"<%= link_to 'Edit your profile', edit_user_path(current_user) %></a></li>
+                  <li><hr class="dropdown-divider "></li>
+                  <a class="dropdown-item text-danger"<%= link_to 'Delete profile', user_path(current_user), data: {
+          turbo_method: :delete,
+          turbo_confirm: "Are you sure" } %></a>
                 </ul>
               </li>
               <li class="nav-item">
