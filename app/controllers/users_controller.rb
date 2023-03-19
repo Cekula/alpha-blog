@@ -8,12 +8,12 @@ class UsersController < ApplicationController
  end
 
  def show
-   @articles = @user.articles
-   @users = @user.articles.paginate(page: params[:page], per_page: 5)
+   @articles = @user.articles.paginate(page: params[:page], per_page: 5)
+   @users = @user.articles
  end
 
  def index
-  @users =User.paginate(page: params[:page], per_page: 5)
+  @users = User.paginate(page: params[:page], per_page: 5)
  end
  
  def edit
