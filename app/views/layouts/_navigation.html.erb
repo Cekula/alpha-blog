@@ -20,6 +20,17 @@
                 <li> <a class="dropdown-item"<%= link_to 'View articles', articles_path %></a></li>
               </ul>
             </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categories
+              </a>
+              <ul class="dropdown-menu row justify-content md-1">
+                <% if logged_in? && current_user.admin? %>
+                 <li> <a class="dropdown-item"<%= link_to 'Create new category', new_category_path%></a></li>
+                <% end -%>
+                <li> <a class="dropdown-item"<%= link_to 'View categories', categories_path %></a></li>
+              </ul>
+            </li>
             <% if logged_in? %>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
