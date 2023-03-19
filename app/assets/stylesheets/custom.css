@@ -17,6 +17,10 @@
 	font-weight: bold;
 }
 
+#category_link {
+    text-decoration: none !important;
+}
+
 
 #home-container {
 	margin-top: 25px;
